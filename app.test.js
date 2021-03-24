@@ -48,7 +48,6 @@ test("Toggling the filter hides completed tasks from the list", () => {
 });
 
   // test goes here
-});
 
 test("Integration test", () => {
   const taskInput = document.getElementById("task__input");
