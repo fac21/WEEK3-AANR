@@ -20,6 +20,15 @@ test("Deleting an entry removes it from the list", () => {
 });
 
 test("Deleting an entry removes it from the list", () => {
+  let expected = document.querySelector("ul").length -1;
+  let listItemId = "task1";
+  removeToDoItem(listItemId);
+  let actual = document.querySelector("ul").length;
+  equal(actual, expected);
+});
+
+
+test("Deleting an entry removes it from the list", () => {
   let expected = 2;
   let listItemId = "task1";
   removeToDoItem(listItemId);
