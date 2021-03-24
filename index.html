@@ -17,12 +17,19 @@
     <input type="submit" value="ADD">
   </form>
 
-  <ul>
+  <ul id="ul">
     <li class="tasks">
       <input type="checkbox" name="checkbox"/>
       <button class="deleteBtn" aria-label="delete-task">X</button>
     </li>
   </ul>
+
+  <template id="task_item_template">
+    <li class="tasks">
+      <input type="checkbox" name="checkbox"/>
+      <button class="deleteBtn" aria-label="delete-task">X</button>
+    </li>
+  </template>
   
     <script src="test-helpers.js"></script>
     <script src="app.js"></script>
