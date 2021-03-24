@@ -8,9 +8,9 @@ test("Submitting a new task adds it to the list", () => {
 
 // Check things off my list so that I can see what I’ve done
 test("Checking an entry marks it as complete", () => {
-  let tick = (document.getElementById("myCheck"));
-  equal(tick.checked, true);
-  equal(tick.parentElement.classList.contains("completed"), true);
+  //tick = (document.getElementById("myCheck"));
+  equal(check("alistitem").checked, true);
+  equal(check("alistitem").parentElement.classList.contains("completed"), true);
 });
 
 // Delete things from the list if I don’t need to do them anymore
@@ -23,11 +23,3 @@ test("Deleting an entry removes it from the list", () => {
 test("Toggling the filter hides completed tasks from the list", () => {
   
 });
-
-function addTask(){
-  return document.getElementsByClassName("tasks") //this should return an array with every list element
-}
-
-function check(){
-
-}
