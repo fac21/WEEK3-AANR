@@ -12,7 +12,7 @@ if ("content" in document.createElement("template")) {
 		console.log(templateListItems);
 		templateListItems[
 			templateListItems.length - 1
-		].childNodes[2].textContent = input;
+		].childNodes[3].textContent = input;
 
 		document.getElementById("task__input").value = "";
 
