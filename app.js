@@ -11,6 +11,10 @@ function addTask(input) {
 
   let templateListItems = document.querySelectorAll("li");
 
+  templateListItems[
+    templateListItems.length - 1
+  ].childNodes[3].textContent = input;
+
     templateListItems[
       templateListItems.length - 1
     ].childNodes[1].id = genID();
