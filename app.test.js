@@ -39,7 +39,12 @@ test("Deleting an entry removes it from the list", () => {
 // // Filter out completed to-dos from my list so that I can focus on what’s left to do
 // test("Toggling the filter hides completed tasks from the list", () => {
 
-//  });
+//   let expected = 2
+
+//   filterTasks()
+
+//   equal(actual, expected);
+// });
 
 //   // test goes here
 

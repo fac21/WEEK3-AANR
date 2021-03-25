@@ -22,26 +22,33 @@
         id="task__input"
         name="task"
         placeholder="Add a task"
-      required
+        required
       />
       <input class="task__btn" type="submit" value="ADD" />
     </form>
   </section>
-
+      <button id="tasks__filter" class="tasks__filter">Filter</button>
   <section>
     <ul id="ul" class="tasks center width-sm">
+      
+      <li class="task">
+        <input type="checkbox" name="checkbox" class="checkbox" id="task-1"/>
+        <label class="task__title" for="task-1">Antonio is a poop face</label>
+        <button class="task__delete-Btn" aria-label="delete-task">X</button>
+      </li>
     </ul>
   </section>
 
     <template id="task_item_template">
       <li class="task center width-sm">
         <input type="checkbox" name="checkbox" class="checkbox" />
-        <p class="task__title"></p>
+        <label class="task__title"></label>
         <button class="task__delete-Btn" aria-label="delete-task">X</button>
       </li>
     </template>
 
   </main>
+
     <script src="test-helpers.js"></script>
     <script src="app.js"></script>
     <script src="app.test.js"></script>

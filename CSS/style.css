@@ -75,3 +75,10 @@ color:white;
 .width-sm {
     max-width: 30rem;
 }
+.hidden{
+    display: none;
+}
+
+.filtered{
+    background: green ;
+}
