@@ -22,7 +22,7 @@ function addTask(input) {
 
 function check(item) {
   item.parentElement.classList.toggle("completed");
-  if (isFiltered()) item.parentElement.classList.toggle("hide");
+  if (isFiltered()) item.parentElement.classList.toggle("hidden");
   return item;
 }
 
@@ -40,7 +40,7 @@ function filterTasks() {
 
   filterBtn.classList.toggle("filtered");
   currentTodos.forEach((todo) => {
-    if (todo.classList.contains("completed")) todo.classList.toggle("hide");
+    if (todo.classList.contains("completed")) todo.classList.toggle("hidden");
   });
 }
 
