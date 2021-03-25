@@ -2,7 +2,7 @@ li {
     list-style-type: none;
 }
 
-.tasks {
+.task {
     display: flex;
     align-items: center;
     justify-content: space-around;
