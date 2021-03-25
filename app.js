@@ -4,9 +4,6 @@ if ("content" in document.createElement("template")) {
     let template = document.getElementById("task_item_template");
     let clone = template.content.cloneNode(true);
 
-function addTask(){
-
-
     let ul = document.getElementById("ul");
     ul.appendChild(clone);
 
@@ -19,7 +16,7 @@ function addTask(){
     ].childNodes[2].textContent = input;
 
 
-    document.getElementById("task").value = "";
+    document.getElementById("task__input").value = "";
 
     //console.log(document.querySelectorAll("li"))
     return document.querySelectorAll("li");
@@ -29,7 +26,7 @@ function addTask(){
     .querySelector("input[type='submit']")
     .addEventListener("click", (event) => {
       event.preventDefault();
-      let formData = document.querySelector("#task").value;
+      let formData = document.querySelector("#task__input").value;
       addTask(formData);
     });
 }
@@ -39,6 +36,7 @@ const ul= document.querySelector("ul")
 console.log(ul)
   
 function check(item){
+    console.log(item);
 item.classList.toggle("completed")
 console.log(item.checked)
 console.log(item.classList)
