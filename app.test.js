@@ -12,8 +12,11 @@ test("Submitting a new task adds it to the list", () => {
 test("Checking an entry marks it as complete", () => {
   //tick = (document.getElementById("myCheck"));
   let checkboxInput = document.querySelector("input[type='checkbox']")
-  equal(check(checkboxInput).checked, true);
-  equal(check(checkboxInput).parentElement.classList.contains("completed"), true);
+  checkboxInput.checked = true;
+  let checkedFn = check(checkboxInput);
+  console.log(checkedFn);
+  equal(checkedFn.checked, true);
+  equal(checkedFn.parentElement.classList.contains("completed"), true);
 });
 
 
