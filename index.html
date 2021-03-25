@@ -17,25 +17,23 @@
     <input type="submit" value="ADD">
   </form>
 
-  <ul class="tasks">
-    <li class="task" id="task-1">
-      <input type="checkbox" name="checkbox" class="checkbox" />
-      <p class='task__title'>Do something 1</p>
-      <button class="task__delete-Btn" aria-label="delete-task">X</button>
+  <ul id="ul">
+     <li class="tasks">
+      <input type="checkbox" name="checkbox"/>
+      <p class="task__title"></p>
+      <button class="deleteBtn" aria-label="delete-task">X</button>
     </li>
+     </ul>
+    
+  <template id="task_item_template">
+    
+    <li class="tasks">
+      <input type="checkbox" name="checkbox"/>
+      <p class="task__title"></p>
+      <button class="deleteBtn" aria-label="delete-task">X</button>
+    </li>
+  </template>
 
-    <li class="task" id="task-2">
-      <input type="checkbox" name="checkbox" class="checkbox"/>
-      <p class='task__title'>Do something 2</p>
-      <button class="task__delete-Btn" aria-label="delete-task">X</button>
-    </li>
-
-    <li class="task" id="task-3">
-      <input type="checkbox" name="checkbox" class="checkbox"/>
-      <p class='task__title'>Do something 3</p>
-      <button id="test-1" class="task__delete-Btn" aria-label="delete-task">X</button>
-    </li>
-  </ul>
   
     <script src="test-helpers.js"></script>
     <script src="app.js"></script>
