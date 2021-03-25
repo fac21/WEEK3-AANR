@@ -1,20 +1,29 @@
-const toDoList = document.querySelectorAll('.task__delete-Btn')
-
-
+const deleteButtons = document.querySelectorAll('.task__delete-Btn')
+const ul= document.querySelector("ul")
+console.log(ul)
 function addTask(){
 
 }
 
-function check(){
-    
+function check(item){
+item.classList.toggle("completed")
+console.log(item.checked)
+console.log(item.classList)
+return item
 }
 
-function removeToDoItem(event){
- console.log(event.target)
+
+function removeToDoItem(parent){
+    ul.removeChild(parent)
 }
-
-
-
-Array.from(toDoList).forEach(toDo=>{
-    toDo.addEventListener('click',removeToDoItem)
+ 
+ul.addEventListener("click", (event) => {
+    const item = event.target
+    if (item.classList.contains("task__delete-Btn")){
+        const parent = item.parentElement
+        removeToDoItem(parent) 
+        }
+    if (item.classList.contains("checkbox")) {
+       check(item)
+    }
 })

@@ -17,7 +17,7 @@ test("Checking an entry marks it as complete", () => {
 
 test("Deleting an entry removes it from the list", () => {
   let expected = true;
-  let listItemId = "task1";
+  let listItemId = document.getElementById("task-1")
   removeToDoItem(listItemId);
   let ul = Array.from(document.querySelector("ul"));
   let actual = ul.every((e) => e.id != ListItemId);
@@ -26,7 +26,7 @@ test("Deleting an entry removes it from the list", () => {
 
 test("Deleting an entry removes it from the list", () => {
   let expected = document.querySelector("ul").length -1;
-  let listItemId = "task1";
+  let listItemId = document.getElementById("task-1")
   removeToDoItem(listItemId);
   let actual = document.querySelector("ul").length;
   equal(actual, expected);
