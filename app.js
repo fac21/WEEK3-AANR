@@ -43,6 +43,7 @@ function check(item) {
 
 function removeToDoItem(parent) {
 	ul.removeChild(parent);
+	return ul;
 }
 
 ul.addEventListener("click", (event) => {

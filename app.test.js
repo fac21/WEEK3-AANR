@@ -9,15 +9,16 @@
 // });
 
 //Check things off my list so that I can see what I’ve done
-test("Checking an entry marks it as complete", () => {
-  //tick = (document.getElementById("myCheck"));
-  let checkboxInput = document.querySelector("input[type='checkbox']");
-  checkboxInput.checked = true;
-  let checkedFn = check(checkboxInput);
-  console.log(checkedFn);
-  equal(checkedFn.checked, true);
-  equal(checkedFn.parentElement.classList.contains("completed"), true);
-});
+
+// test("Checking an entry marks it as complete", () => {
+//   //tick = (document.getElementById("myCheck"));
+//   let checkboxInput = document.querySelector("input[type='checkbox']")
+//   checkboxInput.checked = true;
+//   let checkedFn = check(checkboxInput);
+//   console.log(checkedFn);
+//   equal(checkedFn.checked, true);
+//   equal(checkedFn.parentElement.classList.contains("completed"), true);
+// });
 
 // test("Deleting an entry removes it from the list", () => {
 //   let expected = true;
@@ -28,13 +29,15 @@ test("Checking an entry marks it as complete", () => {
 //   equal(actual, expected);
 // });
 
-// test("Deleting an entry removes it from the list", () => {
-//   let expected = document.querySelector("ul").length -1;
-//   let listItemId = document.querySelector("li")
-//   removeToDoItem(listItemId);
-//   let actual = document.querySelector("ul").length;
-//   equal(actual, expected);
-// });
+test("Deleting an entry removes it from the list", () => {
+  let expected = Array.from(document.querySelectorAll("li")).length -1;
+  let listItemId = document.querySelector("li")
+  removeToDoItem(listItemId);
+  console.log(expected)
+  let actual =Array.from(document.querySelectorAll("li")).length 
+  
+  equal(actual, expected);
+});
 
 // // Filter out completed to-dos from my list so that I can focus on what’s left to do
 // test("Toggling the filter hides completed tasks from the list", () => {
