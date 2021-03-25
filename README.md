@@ -19,3 +19,6 @@ Quality - Amy
 
 ---
 
+We found that working on writing functions based on tests that someone else worked on was hard.
+
+Should we refactor tests after they've been already written?

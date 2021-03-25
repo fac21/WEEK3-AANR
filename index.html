@@ -18,20 +18,22 @@
   </form>
 
   <ul id="ul">
-    <li class="tasks">
+     <li class="tasks">
       <input type="checkbox" name="checkbox"/>
-      <p>text</p>
+      <p class="task__title"></p>
       <button class="deleteBtn" aria-label="delete-task">X</button>
     </li>
-  </ul>
-
+     </ul>
+    
   <template id="task_item_template">
+    
     <li class="tasks">
       <input type="checkbox" name="checkbox"/>
-      <p></p>
+      <p class="task__title"></p>
       <button class="deleteBtn" aria-label="delete-task">X</button>
     </li>
   </template>
+
   
     <script src="test-helpers.js"></script>
     <script src="app.js"></script>
