@@ -1,18 +1,29 @@
 
+if ('content' in document.createElement('template')) {
 
-function addTask(){
+function addTask(event){
+    event.preventDefault();
+  
 let template = document.getElementById("task_item_template");
-let input =
+let clone = template.content.cloneNode(true);
 
-let templateContent = template.content;
-document.getElementById("ul").appendChild(templateContent);
+
+let ul = document.getElementById("ul");
+ul.appendChild(clone);
+
+let formData = document.querySelector("#task").value;
+console.log(formData)
+
 
 let templateListItems = document.querySelectorAll("li");
-templateListItems[templateListItems.length - 1].textContent = input;
+console.log(templateListItems)
+templateListItems[templateListItems.length - 1].childNodes[2].textContent = formData;
 
-}
+document.getElementById("task").value = "";
 
-document.querySelector("input[type='submit']").addEventListener("click", addTask())
+        }
+
+document.querySelector("input[type='submit']").addEventListener("click", addTask)
 
 
-
+    }

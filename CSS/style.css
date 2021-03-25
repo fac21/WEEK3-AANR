@@ -1,0 +1,9 @@
+li {
+    list-style-type: none;
+}
+
+.tasks {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
