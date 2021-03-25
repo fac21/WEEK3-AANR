@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/style.css" />
     <title>To Do List App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>To Do List App</h1>
 
-    <form>
+    <main class="center stack-lg">
+    <h1 class="center width-sm">To Do List</h1>
+
+    <section>
+    <form class="center width-sm stack">
       <label for="task__input">Add your task</label>
       <input
         type="text"
@@ -19,27 +24,24 @@
         placeholder="Add a task"
       required
       />
-      <input type="submit" value="ADD" />
+      <input class="task__btn" type="submit" value="ADD" />
     </form>
+  </section>
 
-
-    <ul id="ul" class="tasks">
-      <li class="task">
-        <input type="checkbox" name="checkbox" class="checkbox" />
-        <p class="task__title">Antonio is a poop face</p>
-        <button class="task__delete-Btn" aria-label="delete-task">X</button>
-      </li>
+  <section>
+    <ul id="ul" class="tasks center width-sm">
     </ul>
+  </section>
 
     <template id="task_item_template">
-      <li class="task">
+      <li class="task center width-sm">
         <input type="checkbox" name="checkbox" class="checkbox" />
         <p class="task__title"></p>
         <button class="task__delete-Btn" aria-label="delete-task">X</button>
       </li>
     </template>
 
-
+  </main>
     <script src="test-helpers.js"></script>
     <script src="app.js"></script>
     <script src="app.test.js"></script>
