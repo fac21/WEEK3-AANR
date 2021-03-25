@@ -8,33 +8,36 @@
     <title>To Do List App</title>
   </head>
   <body>
+    <h1>To Do List App</h1>
 
-  <h1>To Do List App </h1>
-  
-  <form>
-    <label for="task">Add your task</label>
-    <input type="text" id="task__input" name="task" placeholder="Add a task" required/>
-    <input type="submit" value="ADD">
-  </form>
+    <form>
+      <label for="task">Add your task</label>
+      <input
+        type="text"
+        id="task__input"
+        name="task"
+        placeholder="Add a task"
+        required
+      />
+      <input type="submit" value="ADD" />
+    </form>
 
-  <ul id="ul" class="tasks">
-     <li>
-      <input type="checkbox" name="checkbox" class="checkbox"/>
-      <p class="task__title">Antonio is a poop face</p>
-      <button class="task__delete-Btn" aria-label="delete-task">X</button>
-    </li>
-     </ul>
-    
-  <template id="task_item_template">
-    
-    <li class="tasks">
-      <input type="checkbox" name="checkbox" class="checkbox"/>
-      <p class="task__title"></p>
-      <button class="task__delete-Btn" aria-label="delete-task">X</button>
-    </li>
-  </template>
+    <ul id="ul" class="tasks">
+      <li class="task">
+        <input type="checkbox" name="checkbox" class="checkbox" />
+        <p class="task__title">Antonio is a poop face</p>
+        <button class="task__delete-Btn" aria-label="delete-task">X</button>
+      </li>
+    </ul>
 
-  
+    <template id="task_item_template">
+      <li class="task">
+        <input type="checkbox" name="checkbox" class="checkbox" />
+        <p class="task__title"></p>
+        <button class="task__delete-Btn" aria-label="delete-task">X</button>
+      </li>
+    </template>
+
     <script src="test-helpers.js"></script>
     <script src="app.js"></script>
     <script src="app.test.js"></script>

@@ -11,14 +11,13 @@
 //Check things off my list so that I can see what I’ve done
 test("Checking an entry marks it as complete", () => {
   //tick = (document.getElementById("myCheck"));
-  let checkboxInput = document.querySelector("input[type='checkbox']")
+  let checkboxInput = document.querySelector("input[type='checkbox']");
   checkboxInput.checked = true;
   let checkedFn = check(checkboxInput);
   console.log(checkedFn);
   equal(checkedFn.checked, true);
   equal(checkedFn.parentElement.classList.contains("completed"), true);
 });
-
 
 // test("Deleting an entry removes it from the list", () => {
 //   let expected = true;
@@ -40,26 +39,28 @@ test("Checking an entry marks it as complete", () => {
 // // Filter out completed to-dos from my list so that I can focus on what’s left to do
 // test("Toggling the filter hides completed tasks from the list", () => {
 
-
-  
 //  });
 
 //   // test goes here
 
-// test("Integration test", () => {
-//   const taskInput = document.getElementById("task__input");
-//   const submitBtn = document.querySelector('input[type="submit"]');
-//   const testText = "New task to do added";
+test("Integration test", () => {
+  const taskInput = document.getElementById("task__input");
+  const submitBtn = document.querySelector('input[type="submit"]');
+  const testText = "New task to do added";
 
-//   taskInput.value = testText;
-//   submitBtn.click();
+  taskInput.value = testText;
+  submitBtn.click();
 
-//   const toDoList = Array.from(document.querySelector("ul"));
+  const toDoList = Array.from(document.querySelectorAll(".task"));
 
-//   let expected = true;
-//   let actual = toDoList.some((todo) => todo.textContent === testText);
-//   equal(actual, expected);
+  console.log(toDoList);
+
+  let expected = true;
+  let actual = toDoList.some(
+    (todo) => todo.childNodes[3].textContent === testText
+  );
 
 
-// });
-
+  // Delete part for next time
+  equal(actual, expected);
+});
