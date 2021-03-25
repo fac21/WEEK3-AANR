@@ -11,3 +11,11 @@ li {
 .completed{
     color: green;
 }
+
+.hidden{
+    display: none;
+}
+
+.filtered{
+    background: green ;
+}
