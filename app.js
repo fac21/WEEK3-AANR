@@ -34,10 +34,10 @@ const ul = document.querySelector("ul");
 console.log(ul);
 
 function check(item) {
-	console.log(item);
-	item.classList.toggle("completed");
-	console.log(item.checked);
-	console.log(item.classList);
+	// console.log(item);
+	item.parentElement.classList.toggle("completed");
+	// console.log(item.checked);
+	// console.log(item.classList);
 	return item;
 }
 
