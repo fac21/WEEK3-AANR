@@ -52,3 +52,20 @@ test("Integration test", () => {
   // Delete part for next time
   equal(actual, expected);
 });
+
+
+// test("testing that no new task is added if empty string passed", () => {
+//   let input = "";
+//   let taskNumExp = document.getElementsByClassName("task").length;
+//   let actual = addTask(input);
+//   equal(actual.length, taskNumExp);
+//   //equal(actual[actual.length - 1].childNodes[3].textContent, input);
+// })
+
+test("testing that no new task is added if empty string passed", () => {
+let input = "";
+let taskNumExp = document.getElementsByClassName("task").length;
+let actual = addTask(input);
+equal(actual.length, taskNumExp);
+//equal(actual[actual.length - 1].childNodes[3].textContent, input);
+});

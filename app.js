@@ -4,6 +4,7 @@ const filterBtn = document.getElementById("tasks__filter");
 const ul = document.querySelector("ul");
 
 function addTask(input) {
+  if (input == "") return document.querySelectorAll("li");
   const template = document.getElementById("task_item_template");
   let clone = template.content.cloneNode(true);
 
@@ -57,7 +58,7 @@ submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
   if ("content" in document.createElement("template")) {
     let formData = document.querySelector("#task__input").value;
-    if (formData !== "") addTask(formData);
+   addTask(formData);
   }
 });
 
