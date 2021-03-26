@@ -15,14 +15,12 @@ function addTask(input) {
     templateListItems.length - 1
   ].childNodes[3].textContent = input;
 
-    templateListItems[
-      templateListItems.length - 1
-    ].childNodes[1].id = genID();
+  templateListItems[templateListItems.length - 1].childNodes[1].id = genID();
 
-    templateListItems[
-      templateListItems.length - 1
-    ].childNodes[3].htmlFor = genID();
-    
+  templateListItems[
+    templateListItems.length - 1
+  ].childNodes[3].htmlFor = genID();
+
   document.getElementById("task__input").value = "";
 
   return document.querySelectorAll("li");
@@ -74,10 +72,10 @@ ul.addEventListener("click", (event) => {
   }
 });
 
-function genID(){
+function genID() {
   let templateListItems = document.querySelectorAll(".task");
-  if (templateListItems.length == 1)return 'task-1';
-  else if (templateListItems.length > 1){
+  if (templateListItems.length == 1) return "task-1";
+  else if (templateListItems.length > 1) {
     let base = templateListItems[templateListItems.length - 2].childNodes[1].id;
     let taskNum = parseInt(base.slice(-1)) + 1;
     let id = base.slice(0, -1) + taskNum;
