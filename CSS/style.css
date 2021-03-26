@@ -62,6 +62,10 @@ form {
   background:hsla(0, 2%, 77%, 0.226);
 }
 
+.tasks__filter{
+  width:200px;
+}
+
 .completed {
   color: green;
   box-shadow: 2px 2px 2px green;
