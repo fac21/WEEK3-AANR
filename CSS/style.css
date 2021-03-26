@@ -3,18 +3,11 @@
   letter-spacing: 1px;
   text-align: center;
   box-sizing: border-box;
+  padding: 0;
 }
 
 main {
   padding: 2rem;
-}
-
-.stack > * + * {
-  margin-top: 1rem;
-}
-
-.stack-lg > * + * {
-  margin-top: 3rem;
 }
 
 h1 {
@@ -28,10 +21,6 @@ li {
   list-style-type: none;
 }
 
-ul {
-  padding-left: 0rem;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -43,14 +32,21 @@ form {
   margin-right: auto;
   border-radius: 15px;
   cursor: pointer;
+  font-weight: 900;
+  transition: 0.2s ease-in;
+}
+
+.task__btn:active {
+  transform: scale(0.95);
 }
 
 .task__delete-Btn {
   border: 1px solid red;
   background: white;
   color: red;
-  border-radius: 10px;
+  border-radius: 50%;
   cursor: pointer;
+  padding: 0.5rem;
 }
 
 .task__delete-Btn:hover {
@@ -62,10 +58,17 @@ form {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem;
+  background:hsla(0, 2%, 77%, 0.226);
 }
 
 .completed {
   color: green;
+  box-shadow: 2px 2px 2px green;
+}
+
+.completed label {
+  text-decoration: line-through;
 }
 
 .center {
@@ -76,10 +79,20 @@ form {
 .width-sm {
   max-width: 30rem;
 }
+
 .hidden {
   display: none;
 }
 
 .filtered {
   background: green;
+  color: white;
+}
+
+.stack > * + * {
+  margin-top: 1rem;
+}
+
+.stack-lg > * + * {
+  margin-top: 3rem;
 }
