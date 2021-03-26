@@ -4,51 +4,60 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Cache-control" content="public">
+    <meta name="description" content="To Do List App">
     <link rel="stylesheet" href="CSS/style.css" />
     <title>To Do List App</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-
     <main class="center stack-lg">
-    <h1 class="center width-sm">To Do List</h1>
+      <h1 class="center width-sm">To Do List</h1>
 
-    <section>
-    <form class="center width-sm stack">
-      <label for="task__input" class="task__input-label">Add a task</label>
-      <input
-        type="text"
-        id="task__input"
-        name="task"
-        placeholder="Add a task"
-        required
-      />
-      <input class="task__btn" type="submit" value="ADD" />
-    </form>
-  </section>
-      <button id="tasks__filter" class="tasks__filter">Filter</button>
-  <section>
-    <ul id="ul" class="tasks center width-sm">
-      
-      <li class="task">
-        <input type="checkbox" name="checkbox" class="checkbox" id="task-1"/>
-        <label class="task__title" for="task-1">Antonio is a poop face</label>
-        <button class="task__delete-Btn" aria-label="delete-task">X</button>
-      </li>
-    </ul>
-  </section>
+      <section>
+        <form class="center width-sm stack">
+          <label for="task__input" class="task__input-label">Add a task</label>
+          <input
+            type="text"
+            id="task__input"
+            name="task"
+            placeholder="Add a task"
+            required
+          />
+          <input class="task__btn" type="submit" value="ADD" />
+        </form>
+      </section>
+      <button id="tasks__filter" class="tasks__filter task__btn">
+        Filter out completed tasks
+      </button>
+      <section>
+        <ul id="ul" class="tasks center width-sm stack">
+          <li class="task">
+            <input
+              type="checkbox"
+              name="checkbox"
+              class="checkbox"
+              id="task-1"
+            />
+            <label class="task__title" for="task-1"
+              ></label
+            >
+            <button class="task__delete-Btn" aria-label="delete-task">X</button>
+          </li>
+        </ul>
+      </section>
 
-    <template id="task_item_template">
-      <li class="task center width-sm">
-        <input type="checkbox" name="checkbox" class="checkbox" />
-        <label class="task__title"></label>
-        <button class="task__delete-Btn" aria-label="delete-task">X</button>
-      </li>
-    </template>
-
-  </main>
+      <template id="task_item_template">
+        <li class="task center width-sm">
+          <input type="checkbox" name="checkbox" class="checkbox" />
+          <label class="task__title"></label>
+          <button class="task__delete-Btn" aria-label="delete-task">X</button>
+        </li>
+      </template>
+    </main>
 
     <script src="test-helpers.js"></script>
     <script src="app.js"></script>

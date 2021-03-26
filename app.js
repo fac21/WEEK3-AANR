@@ -45,7 +45,7 @@ function isFiltered() {
 }
 
 function filterTasks() {
-  const currentTodos = document.querySelectorAll("li");
+  const currentTodos = document.querySelectorAll(".task");
 
   filterBtn.classList.toggle("filtered");
   currentTodos.forEach((todo) => {
@@ -74,10 +74,10 @@ ul.addEventListener("click", (event) => {
   }
 });
 
-function genID(){
-  let templateListItems = document.querySelectorAll("li");
-  if (templateListItems.length == 1)return 'task-1';
-  else if (templateListItems.length > 1){
+function genID() {
+  let templateListItems = document.querySelectorAll(".task");
+  if (templateListItems.length == 1) return "task-1";
+  else if (templateListItems.length > 1) {
     let base = templateListItems[templateListItems.length - 2].childNodes[1].id;
     let taskNum = parseInt(base.slice(-1)) + 1;
     let id = base.slice(0, -1) + taskNum;

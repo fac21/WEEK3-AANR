@@ -8,9 +8,7 @@ test("Submitting a new task adds it to the list", () => {
 });
 
 //Check things off my list so that I can see what I’ve done
-
 test("Checking an entry marks it as complete", () => {
-  //tick = (document.getElementById("myCheck"));
   let checkboxInput = document.querySelector("input[type='checkbox']");
   checkboxInput.checked = true;
   let checkedFn = check(checkboxInput);
@@ -35,18 +33,6 @@ test("Deleting an entry removes it from the list", () => {
 
   equal(actual, expected);
 });
-
-// // Filter out completed to-dos from my list so that I can focus on what’s left to do
-// test("Toggling the filter hides completed tasks from the list", () => {
-
-//   let expected = 2
-
-//   filterTasks()
-
-//   equal(actual, expected);
-// });
-
-//   // test goes here
 
 test("Integration test", () => {
   const taskInput = document.getElementById("task__input");
