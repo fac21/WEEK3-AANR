@@ -9,18 +9,21 @@ function addTask(input) {
 
   ul.appendChild(clone);
 
-  let templateListItems = document.querySelectorAll("li");
+  let templateListItems = document.querySelectorAll(".task");
 
-  templateListItems[
-    templateListItems.length - 1
-  ].childNodes[3].textContent = input;
+  let lastElement = templateListItems[
+    templateListItems.length - 1];
 
-  templateListItems[templateListItems.length - 1].childNodes[1].id = genID();
+  let checkbox = lastElement.querySelector(".checkbox");
 
-  templateListItems[
-    templateListItems.length - 1
-  ].childNodes[3].htmlFor = genID();
+  let label = lastElement.querySelector(".task__title");
+  
+    label.textContent = input;
 
+    checkbox.id = genID();
+
+    label.htmlFor = genID();
+    
   document.getElementById("task__input").value = "";
 
   return document.querySelectorAll("li");
@@ -52,7 +55,6 @@ function filterTasks() {
 
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
-
   if ("content" in document.createElement("template")) {
     let formData = document.querySelector("#task__input").value;
     if (formData !== "") addTask(formData);
